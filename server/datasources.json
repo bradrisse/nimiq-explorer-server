@@ -1,0 +1,12 @@
+{
+  "mongodb": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "nimiq-explorer",
+    "password": "root",
+    "name": "mongodb",
+    "user": "root",
+    "connector": "mongodb"
+  }
+}

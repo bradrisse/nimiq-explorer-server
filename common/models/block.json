@@ -1,0 +1,58 @@
+{
+  "name": "Block",
+  "plural": "Blocks",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "height": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "hash": {
+      "type": "string",
+      "required": true
+    },
+    "size": {
+      "type": "number",
+      "required": true
+    },
+    "value": {
+      "type": "number",
+      "required": true
+    },
+    "fees": {
+      "type": "number",
+      "required": true
+    },
+    "reward": {
+      "type": "number",
+      "required": true
+    },
+    "timestamp": {
+      "type": "number",
+      "required": true
+    },
+    "transaction_count": {
+      "type": "number",
+      "required": true
+    },
+    "difficulty": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "transactions": {
+      "type": "hasMany",
+      "model": "Transaction",
+      "foreignKey": "block_height"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

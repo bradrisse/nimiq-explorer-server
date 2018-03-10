@@ -1,0 +1,39 @@
+{
+  "name": "Account",
+  "plural": "Accounts",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "address": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "balance": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "nonce": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "blocks": {
+      "type": "hasMany",
+      "model": "Block",
+      "foreignKey": "miner_address"
+    },
+    "transactions": {
+      "type": "hasMany",
+      "model": "Transaction",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Transaction",
+  "plural": "Transactions",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "hash": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "block_height": {
+      "type": "number",
+      "required": true
+    },
+    "fee": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "receiver_address": {
+      "type": "string",
+      "required": true
+    },
+    "sender_address": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "timestamp": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

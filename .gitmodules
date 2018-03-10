@@ -1,0 +1,6 @@
+[submodule "client"]
+	path = client
+	url = https://github.com/bradrisse/nimiq-explorer.git
+[submodule "core"]
+	path = core
+	url = https://github.com/nimiq-network/core.git
