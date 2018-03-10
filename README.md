@@ -30,5 +30,5 @@ Use the quickstart guide to run the server locally, add you changes to the backe
 
 I would like to give a shoutout to [@sisou](https://github.com/sisou) for creating [Nimiq Watch](https://nimiq.watch) and was the inspiration for creating this.
 
-I would also like to give a shoutout to the Nimiq Team for creating an amazing broser-based blockchain [Nimiq](https://nimiq.com)
+I would also like to give a shoutout to the Nimiq Team for creating an amazing browser-based blockchain [Nimiq](https://nimiq.com)
     
