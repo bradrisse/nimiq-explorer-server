@@ -20,6 +20,9 @@ module.exports = function(app) {
 
     const $ = {};
 
+    // TODO set default to 'main' for MainNet.
+    const network = 'dev';
+
     function initApi () {
         $.blockchain.getBlocks(700, 500, true).then(function (blocks) {
             console.log('blocks ', blocks)
@@ -28,6 +31,7 @@ module.exports = function(app) {
 
     (async () => {
         console.log('async begin')
+        Nimiq.GenesisConfig.init(Nimiq.GenesisConfig.CONFIGS[network]);
         const networkConfig = new Nimiq.DumbNetworkConfig();
 
         $.consensus = await Nimiq.Consensus.full(networkConfig);
