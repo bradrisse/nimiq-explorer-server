@@ -13,6 +13,7 @@
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
+    "async": "^2.6.0",
     "atob": "^2.0.3",
     "btoa": "^1.1.2",
     "chalk": "^1.1.3",

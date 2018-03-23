@@ -18,6 +18,7 @@ coverage
 node_modules
 npm-debug.log
 full-consensus
+dev-full-consensus
 light-consensus
 peer-key
 wallet
