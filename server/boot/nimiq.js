@@ -42,7 +42,7 @@ module.exports = function(app) {
             isRunning = true;
             blockDeconstructed++;
             console.log('running queue ', blockDeconstructed)
-            $.blockchain.getBlockAt(blockDeconstructed).then(function (block) {
+            $.blockchain.getBlockAt(blockDeconstructed, true).then(function (block) {
                 async.waterfall([
                     function(callback) {
                         _createblock(block, callback)
