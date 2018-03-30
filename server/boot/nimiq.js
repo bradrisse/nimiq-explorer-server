@@ -155,6 +155,7 @@ module.exports = function(app) {
             timestamp: block.timestamp,
             hash: block.bodyHash.toHex(),
             miner_address: block.minerAddr.toUserFriendlyAddress(),
+            extra_data: block.body.extraData ? Nimiq.BufferUtils.toHex(block.body.extraData) : '',
             transaction_count: block.transactions.length,
             difficulty: block.difficulty,
             size: block.serializedSize,
@@ -175,8 +176,13 @@ module.exports = function(app) {
                     sender_address: transaction.sender.toUserFriendlyAddress(),
                     timestamp: _block.timestamp,
                     value: transaction.value,
-                    block_height: _block.height
+                    block_height: _block.height,
+                    extra_data: transaction.extraData ? Nimiq.BufferUtils.toHex(transaction.extraData) : ''
                 })
+
+                if (transaction.extraData) {
+                    console.log('Nimiq.BufferUtils.toHex(transaction.extraData) ', Nimiq.BufferUtils.toHex(transaction.extraData))
+                }
 
                 _block.value += transaction.value;
                 _block.fees += transaction.fee;

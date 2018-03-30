@@ -34,6 +34,10 @@
       "required": true,
       "default": 0
     },
+    "extra_data": {
+      "type": "string",
+      "required": false
+    },
     "timestamp": {
       "type": "number",
       "required": true
