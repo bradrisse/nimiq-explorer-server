@@ -25,7 +25,7 @@ module.exports = function(app) {
     const $ = {};
 
     // TODO set default to 'main' for MainNet.
-    const network = 'dev';
+    const network = 'test';
 
     var blocksQueue = [];
 
