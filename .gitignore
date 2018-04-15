@@ -20,6 +20,7 @@ npm-debug.log
 full-consensus
 dev-full-consensus
 test-full-consensus
+main-full-consensus
 light-consensus
 peer-key
 wallet
